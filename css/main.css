@@ -1,0 +1,50 @@
+container {
+  margin: 60px auto;
+}
+
+.containerLeft {
+  display: table-cell;
+  width: 450px;
+}
+
+.containerRight {
+  display: table-cell;
+  border-left: 1px solid black;
+  padding-left: 50px;
+}
+
+.container-bottom {
+  padding-top: 40px;
+  margin-bottom: 60px;
+}
+
+.container-bottom p {
+  display: none;
+}
+
+.HKSetLabel {
+  margin-right: 10px;
+}
+
+#hotkeySets {
+  min-height: 50px;
+}
+
+#btnRun {
+  font-weight: bold;
+  width: 60px;
+  height: 30px;
+}
+
+.fileBtn {
+  display: inline-block !important;
+}
+
+h4 {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p {
+    margin: 0 0 20px !important;
+}

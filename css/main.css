@@ -40,6 +40,12 @@ container {
   display: inline-block !important;
 }
 
+footer {
+  margin: 0 auto;
+  display: table;
+  text-align: center;
+}
+
 h4 {
   font-weight: bold;
   cursor: pointer;

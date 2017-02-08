@@ -64,8 +64,8 @@ var pageData = {
     "en-GB":"Is this even legal? What's CipSoft position on this tool?"
   },
   "tx-faq1a": {
-    "pt-BR":"R: I hope it is, we will see about that soon. :)",
-    "en-GB":"A: I hope it is, we will see about that soon. :)"
+    "pt-BR":"R: A CipSoft analisou esta ferramenta após pedido e concordou que ela não viola as regras do Tibia,  o que singnifica que você não será punido por utilizá-la. Entretanto, eles ressaltam que isso não é um sinal de aprovação da ferramenta, mas apenas que ela é \"tolerada\", e isso quer dizer que caso você tenha algum problema técnico devido ao uso da ferramenta, eles não poderão oferecer qualquer tipo de suporte, já que foi utilizada uma ferramenta não-suportada para jogar o jogo. Você pode ler a resposta enviada (em inglês) <a href=\"img/SolkrinReply.png\" target = \"_blank\">aqui</a>.",
+    "en-GB":"A: CipSoft has analyzed the tool upon request and agreed that it doesn't violate the Tibia Rules, which means you won't get punished for using it. However, they remark that this doesn't mean the tool is approved, but rather \"tolerate\", and that means they will not offer support in case of technical issues related to the tool, since players used an unsupported software to play the game. You can read the email replay <a href=\"img/SolkrinReply.png\" target = \"_blank\">here</a>."
   },
   "tx-faq2q": {
     "pt-BR":"Como isso funciona? É seguro?",
@@ -108,12 +108,12 @@ var pageData = {
     "en-GB":"A: Nothing as well. If you had hotkeys that weren't allowed on Tibia 10 (like Alt + Fx, or numeric keyboard), they should stay the same. But make sure you test them before doing something crazy."
   },
   "tx-faq7q": {
-    "pt-BR":"Quem é você? Por que fez isso? Qual seu objetivo secreto?",
-    "en-GB":"Who are you? Why are you doing this? What's your hidden agenda?"
+    "pt-BR":"Quem é você?",
+    "en-GB":"Who are you?"
   },
   "tx-faq7a": {
-    "pt-BR":"R: O nome do meu personagem é Lee kun, e criei esta ferramenta porque é divertido. E também mais fácil que as coisas que eu realmente deveria estar fazendo :(. Meu objetivo secreto é secreto por um motivo!",
-    "en-GB":"A: My character name is Lee kun, and I do it because it's fun. Also easier than the other things I should be doing instead :(. My hidden agenda is hidden for a reason!"
+    "pt-BR":"R: O nome do meu personagem é Lee kun. Se tiver alguma dúvida ou sugestão sobre essa ferramenta, dê uma passada lá em Pacera e fale comigo. :)",
+    "en-GB":"A: My character name is Lee kun. If you have any questions or suggestions regarding this tool just pay me a visit on Pacera. :)"
   },
 };
 

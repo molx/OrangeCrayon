@@ -12,8 +12,8 @@ function updateLang(lang = userLang) {
 
 var pageData = {
   "tx-title": {
-    "pt-BR":"Tibia10to11 - Migre suas hotkeys do cliente antigo para o novo",
-    "en-GB":"Tibia10to11 - Migrate your hotkeys from the old to the new client"
+    "pt-BR":"Migre suas hotkeys do cliente antigo para o novo",
+    "en-GB":"Migrate your hotkeys from the old to the new client"
   },
     "tx-selhkset": {
     "pt-BR":"Selecione os sets de hotkey que você quer migrar:",

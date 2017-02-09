@@ -1,5 +1,60 @@
-container {
-  margin: 60px auto;
+body {
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+  background-color: #051122;
+}
+
+.container {
+ 
+}
+
+#HeaderArtworkDiv {
+    position: absolute;
+    text-align: center;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    top: 0;
+    height: 800px;
+    width: 100%;
+    z-index: -1;
+}
+
+.outer {
+  border-color: #793d03;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #debb9d;
+  display: inline-block;
+  width: 100%;
+}
+
+.inner {
+  border-color: #793d03;
+  border-style: solid;
+  border-width: 1px;
+  background-image: url("../img/scroll.gif");
+  margin: 5px;
+  padding: 5px;
+}
+
+.outernav {
+  border-color: #793d03;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  background-color: #debb9d;
+  display: inline-block;
+}
+
+.innernav {
+  border-color: #793d03;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+}
+
+.navbar {
+  margin: 0 5px 5px 5px;
+  background-image: url("../img/scroll.gif");
+
 }
 
 .containerLeft {
@@ -14,8 +69,7 @@ container {
 }
 
 .container-bottom {
-  padding-top: 40px;
-  margin-bottom: 60px;
+  
 }
 
 .container-bottom p {
@@ -34,6 +88,8 @@ container {
   font-weight: bold;
   width: 60px;
   height: 30px;
+  display: table;
+  margin: 0 auto;
 }
 
 .fileBtn {
@@ -41,16 +97,20 @@ container {
 }
 
 footer {
-  margin: 0 auto;
+  margin: 10px auto;
   display: table;
   text-align: center;
 }
 
-h4 {
+h5 {
   font-weight: bold;
   cursor: pointer;
 }
 
 p {
     margin: 0 0 20px !important;
+}
+
+.light {
+  color: #FFFFFF;
 }

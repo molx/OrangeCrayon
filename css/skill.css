@@ -1,0 +1,41 @@
+.col {
+  display: inline-block;
+}
+
+.containerRight {
+  width: 600px;
+}
+
+.srow {
+  width: 100%;
+}
+
+
+.colSkill {
+  width: 35%;
+}
+
+.colLevel {
+  width: 25%;
+}
+
+.colPct{
+  width: 25%;
+}
+
+.colRLevel {
+  width: 15%;
+}
+
+.colRPct{
+  width: 20%;
+}
+
+.colIf {
+  width: 20%;
+}
+
+p {
+  font-size: 14px;
+  text-indent: 50px;
+}

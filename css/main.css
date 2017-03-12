@@ -9,15 +9,15 @@ body {
 }
 
 #HeaderArtworkDiv {
-    position: absolute;
-    text-align: center;
-    background-position: top center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    top: 0;
-    height: 800px;
-    width: 100%;
-    z-index: -1;
+  position: absolute;
+  text-align: center;
+  background-position: top center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  top: 0;
+  height: 800px;
+  width: 100%;
+  z-index: -1;
 }
 
 .outer {
@@ -44,7 +44,17 @@ body {
   border-width: 0 1px 1px 1px;
   background-color: #debb9d;
   display: inline-block;
-  position: fixed;
+  width: 460px;
+}
+
+.navLang {
+  width: 320px;
+  float: right;
+}
+
+.active {
+  font-weight: bold;
+  cursor: default;
 }
 
 .innernav {

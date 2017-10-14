@@ -97,7 +97,7 @@ function pts_to_level(pts, voc, type) {
     y = 1.1;
   }
   
-  var skill = Math.round(Math.log(- ( (pts - y*pts - A) / A )) / Math.log(y) + minlevel);
+  var skill = Math.round(Math.log(- ( (pts - y*pts - A) / A )) / Math.log(y) + minlevel) - 1;
   
   return skill;
 }
@@ -127,14 +127,18 @@ function calc_skill(form) {
     var real_pts = skill_wo_loyalty(curr_pts, loyalty);
     var real_level = pts_to_level(real_pts, voc, type);
     var real_curr_base = level_to_pts(real_level, voc, type);
-    var real_next_total = level_to_pts(real_level + 1, voc, type) - level_to_pts(real_level, voc, type);
+    var real_next_total = level_to_pts(real_level + 1, voc, type) - real_curr_base;
+    console.log(curr_pts);
+    console.log(real_pts);
+    console.log(real_curr_base);
+    console.log(real_next_total);
     var real_pct = Math.round(100 * (1 - (real_pts - real_curr_base)/real_next_total));
     var bonus = loyalty_bonus(loyalty);
     
     var if_pts = real_pts * (if_bonus/100 + 1);
     var if_level = pts_to_level(if_pts, voc, type);
     
-    document.getElementById("loyalty_bonus").innerHTML = "Real skills with Loyalty bonus " + Math.floor(((bonus - 1) * 100)) + "%:";
+    document.getElementById("loyalty_bonus").innerHTML = "Real skills with Loyalty bonus " + Math.round((bonus - 1) * 100) + "%:";
     
     document.getElementById(type + "_level_real").innerHTML = real_level;
     //document.getElementById("real_skill_pts").innerHTML = real_pts;

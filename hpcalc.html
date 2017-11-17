@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function calc(form) {
+        var creature = form.creature.value.toLowerCase();
+        var log = form.log.value.toLowerCase().split("\n");
+        var regex_dmg = creature + " loses ([0-9]{1,4}) hitpoints";
+        var regex_heal = creature + " healed itself for ([0-9]{1,4}) hitpoints";
+        var hp = 0;
+        for(var i = 0;i < log.length;i++){
+          var m_add = log[i].match(regex_dmg)
+          var m_sub = log[i].match(regex_heal)
+          
+          hp += parseInt(m_add !== null ? parseInt(m_add[1]) : 0);
+          hp -= parseInt(m_sub !== null ? parseInt(m_sub[1]) : 0);
+        }
+        document.getElementById("total_hp").innerHTML = hp;
+      };
+    </script>
+  </head>
+  <body>
+    <form name="myform" action="" class="calcform" method="GET">
+      <p>Creature Name:</p>
+      <input type="text" id="creature"><br /><br />
+      <p>Server log:</p>
+      <textarea rows="4" cols="50" id="log"></textarea><br /><br />
+      <input id="butncalc" type="button" value="Calc" onclick="calc(this.form)" />
+      <p>Total HP:</p>
+      <p id="total_hp"></p>
+    </form>
+  </body>
+</html>

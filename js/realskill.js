@@ -44,9 +44,33 @@ function level_to_pts(level, voc, type) {
     y = 1.1;
   }
   
-  var points = A*((1 - Math.pow(y, level - minlevel))/(1 - y));
+  var points = A*((Math.pow(y, level - minlevel) - 1)/(y - 1));
   return Math.round(points);
 }
+
+function next_pts(level, voc, type) {
+  var minlevel = 10;
+  var A = 1;
+  var y = 1;
+  if (type == "magic") {
+    A = 1600;
+    y = magic_vocs[voc];
+    minlevel = 0;
+  } else if (type == "axe" || type == "sword" || type == "club" || type == "fist" || type == "shield") {
+    A = 50;
+    y = melee_vocs[voc];
+  } else if (type == "dist") {
+    A = 50;
+    y = dist_vocs[voc];
+  } else if (type == "fish") {
+    A = 20;
+    y = 1.1;
+  }
+  
+  var points = A*Math.pow(y, level);
+  return Math.round(points);
+}
+
 
 function current_pts(level, voc, pct_left, type) {
   
@@ -96,8 +120,9 @@ function pts_to_level(pts, voc, type) {
     A = 20;
     y = 1.1;
   }
-  
-  var skill = Math.round(Math.log(- ( (pts - y*pts - A) / A )) / Math.log(y) + minlevel) - 1;
+  //=LN(B9*(C1-1)/1600 + 1)/LN(C1)
+  var skill = Math.floor(Math.log(pts * (y - 1)/A + 1)/Math.log(y) + minlevel);
+  //var skill = Math.round(Math.log(- ( (pts - y*pts - A) / A )) / Math.log(y) + minlevel) - 1;
   
   return skill;
 }
@@ -127,12 +152,14 @@ function calc_skill(form) {
     var real_pts = skill_wo_loyalty(curr_pts, loyalty);
     var real_level = pts_to_level(real_pts, voc, type);
     var real_curr_base = level_to_pts(real_level, voc, type);
-    var real_next_total = level_to_pts(real_level + 1, voc, type) - real_curr_base;
-    console.log(curr_pts);
-    console.log(real_pts);
-    console.log(real_curr_base);
-    console.log(real_next_total);
-    var real_pct = Math.round(100 * (1 - (real_pts - real_curr_base)/real_next_total));
+    var real_next_total = level_to_pts(real_level + 1, voc, type);
+	var real_next_pts = next_pts(real_level, voc, type);
+	var skill_left_pts = real_next_total - real_pts;
+	console.log(skill_left_pts);
+	console.log(real_next_pts);
+    //var real_pct = Math.round(100 * (1 - (real_pts - real_curr_base)/real_next_total));
+	var real_pct = Math.round(100 * (skill_left_pts/real_next_pts));   
+    
     var bonus = loyalty_bonus(loyalty);
     
     var if_pts = real_pts * (if_bonus/100 + 1);
